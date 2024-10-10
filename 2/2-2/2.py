@@ -8,8 +8,8 @@ while num != "q":
             list.append(num)
         except:
             print("Введите число!")
-count = 0
-for i in list:
-    if i < 0:
-        count += 1
-print(f"Отрицательных чисел в списке: {count}\n{list}")
+for i in list[::-1]:
+    if i <= 0:
+        list.remove(i)
+
+print(f"Список с положительными числами:\n{list}")
